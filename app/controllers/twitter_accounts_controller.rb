@@ -1,6 +1,6 @@
 class TwitterAccountsController < ApplicationController
   before_action :require_user_logged_in!
-  before_action :set_twitter_account, only: [:destroy] #TODO :show, :edit, :update,
+  before_action :set_twitter_account, only: [:destroy, :show, :edit, :update]
   def index
     @twitter_accounts = Current.user.twitter_accounts
   end
