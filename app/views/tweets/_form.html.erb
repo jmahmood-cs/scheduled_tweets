@@ -20,6 +20,6 @@
   <%= form.button "Schedule Tweet", class: "btn btn-primary" %>
 
   <% if form.object.persisted? %>
-    <%= button_to "Destroy", form.object, method: :delete, :data => {turbo: false}, class: "btn btn-danger" %>
+    <%= link_to "Destroy", form.object, :data => {turbo_method: :delete}, class: "btn btn-danger" %>
   <% end %>
 <% end %>
